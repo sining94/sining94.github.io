@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Hallym';
+    src: url('../font/HallymR.ttf') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hallym';
+    src: url('../font/HallymM.ttf') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hallym';
+    src: url('../font/HallymB.ttf') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareR';
+    src: url('../font/NanumSquareR.ttf') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SBAggro';
+    src: url('../font/SBAggro.ttf') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Simplehae';
+    src: url('../font/Cafe24Simplehae.ttf') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}

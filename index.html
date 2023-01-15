@@ -1,284 +1,167 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="KO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YJ's Portfolio</title>
+    <meta name="description" content="웹 퍼블리셔 이용주 포트폴리오" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="웹 퍼블리셔 이용주 포트폴리오입니다." />
+    <meta property="og:description" content="웹 퍼블리셔 이용주 포트폴리오" />
+    <meta property="og:url" content="https://sining94.github.io/main/index.html" />
+    <meta property="og:image" content="./img/og_descrip.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="400" />
+    <meta name="theme-color" content="#c1d2e2" />
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="lE=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="css.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <meta name="vlewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <script>
-        $(function () {
-            var n = 0;
-            var lee = 0;
-            // $("body,html").animate({"scrollTop":"0"});
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script defer src="./js/main.js"></script>
+  </head>
 
-            setInterval(function () {
-                n++;
-                $("#train").animate({ "left": - + (n * 100) + "%" }, 700);
-
-                if (n == 4) {
-                    n = 0;
-                    $("#train").animate({ "left": "0" }, 0);
-                }
-            }, 3000);
-
-            $(window).scroll(function () {
-
-                var scroll = $(window).scrollTop();
-
-                if (scroll > 0) {
-                    $("header").css({ "background": "rgba(0,0,0,0.8)" });
-                }
-                else if (scroll == 0) {
-                    $("header").css({ "background": "none" });
-                }
-            });
-            var timer = 0;
-
-            setInterval(function () {
-                timer++;
-                $("#his3_1 > a > div").animate({ "left": - + (timer * 100) + "%" }, 1000);
-
-                if (timer == 4) {
-                    $("#his3_1 > a > div").animate({ "left": "0" }, 0);
-                    $("#his3_1 > a").css({ "background": "#cbebf8" });
-                    timer = 0;
-                }
-                else if (timer == 3) {
-                    $("#his3_1 > a").css({ "background": "#fde5e3" });
-                }
-                else if (timer == 2) {
-                    $("#his3_1 > a").css({ "background": "#ffffff" });
-                }
-                else if (timer == 1) {
-                    $("#his3_1 > a").css({ "background": "#efecf3" });
-                }
-            }, 3000);
-
-            $("#his4_1").hover(function () {
-                $("#his4_1_wrap").css({ "opacity": "1" });
-                $("#his4_1 > a > img").css({ "transform": "scale(0.78)" });
-
-            }, function () {
-                $("#his4_1_wrap").css({ "opacity": "0" });
-                $("#his4_1 > a > img").css({ "transform": "scale(1)" });
-            });
-            $("#his4_2").hover(function () {
-                $("#his4_2_wrap").css({ "opacity": "1" });
-                $("#his4_2 > a > img").css({ "transform": "scale(0.42)" });
-
-            }, function () {
-                $("#his4_2_wrap").css({ "opacity": "0" });
-                $("#his4_2 > a > img").css({ "transform": "scale(1)" });
-            });
-
-
-            $("#his5_1").hover(function () {
-                $("#his5_2_wrap").css({ "opacity": "1" });
-                $("#his5_1 > a > img").css({ "transform": "scale(0.72)" });
-                $(this).find(".his5_wrap").css({ "opacity": "1" });
-
-            }, function () {
-                $("#his5_2_wrap").css({ "opacity": "0" });
-                $("#his5_1 > a > img").css({ "transform": "scale(1)" });
-                $(this).find(".his5_wrap").css({ "opacity": "0" });
-            });
-            $("#his5_2").hover(function () {
-                $("#his5_2_wrap").css({ "opacity": "1" });
-                $("#his5_2 > a > img").css({ "transform": "scale(0.8)" });
-                $(this).find(".his5_wrap").css({ "opacity": "1" });
-
-            }, function () {
-                $("#his5_2_wrap").css({ "opacity": "0" });
-                $("#his5_2 > a > img").css({ "transform": "scale(1)" });
-                $(this).find(".his5_wrap").css({ "opacity": "0" });
-            });
-            $("#his5_3").hover(function () {
-                $("#his5_3_wrap").css({ "opacity": "1" });
-                $("#his5_3 > a > img").css({ "transform": "scale(1.3)", "marginTop": "15%", "filter": "blur(2px)" });
-                $(this).find(".his5_wrap").css({ "opacity": "1" });
-
-            }, function () {
-                $("#his5_3_wrap").css({ "opacity": "0" });
-                $("#his5_3 > a > img").css({ "transform": "scale(1)", "marginTop": "25%", "filter": "none" });
-                $(this).find(".his5_wrap").css({ "opacity": "0" });
-            });
-
-        });
-    </script>
-</head>
-
-<body>
-    <header>
-        <h1><a href="#">LYJ</a></h1>
-        <ul>
-            <li><a href="#int">INTRO</a></li>
-            <li><a href="#pro">PROFILE</a></li>
-            <li><a href="#por">PORTFOLIO</a></li>
-            <li><a href="#add">ADDRESS</a></li>
-        </ul>
-    </header>
-    <div id="int" class="slide">
-        <div id="train">
-            <img src="./ima/slide1.jpg" alt="슬라이드1">
-            <img src="./ima/slide2.png" alt="슬라이드2">
-            <img src="./ima/slide3.jpg" alt="슬라이드3">
-            <img src="./ima/slide4.jpg" alt="슬라이드4">
-            <img src="./ima/slide1.jpg" alt="슬라이드1">
+  <body>
+    <div class="wrapper">
+      <!-- //헤드 class:hide -->
+      <header class="head">
+        <div class="inner">
+          <h1 class="t_logo">
+            <a href="#"><img src="./img/logo.png" alt="YJ's Portfolio" />YJ's Portfolio</a>
+          </h1>
+          <nav>
+            <ul class="gnb">
+              <li><a href="#Intro">Intro</a></li>
+              <li><a href="#About">About</a></li>
+              <li><a href="#Skills">Skills</a></li>
+              <li><a href="#Project">Project</a></li>
+            </ul>
+          </nav>
         </div>
-    </div>
-    <div id="pro">
-        <div>
-            <p>PROFILE</p>
-            <img src="./ima/profile.png" alt="profile">
-            <h1 id="name">NAME</h1>
-            <span id="name1">이용주</span>
-            <h1 id="mail">E-mail</h1>
-            <span id="mail1">sining94@Gmail.com</span>
-            <h1 id="birth">Birth</h1>
-            <span id="birth1">1994.12.18</span>
+      </header>
+      <!-- //헤드 -->
+      <div class="section_1">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide01">
+              <div class="scroll-ico">
+                <img src="./img/scroll.png" alt="scroll" />
+              </div>
+              <div class="main-bg animate">
+                <h1 class="main-tit">YJ's Portfolio</h1>
+                <p class="write-txt animate"></p>
+                <img src="./img/sec1_bg.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide animate slide02">
+              <div class="slide-inner">
+                <h2 class="cate-txt">About</h2>
+                <div class="flex-area">
+                  <div class="flex-list">
+                    <span>안녕하세요. 퍼블리셔 이용주 입니다.<br />원하는대로, 생각한대로 표현 되는 즐거움에 공부를 시작하게 되었습니다.</span>
+                    <span>코드를 통해 남들에게 표현하고자 하는 바를 나타낼수 있는 점이 즐거웠고 현재는 React를 공부중에 있습니다.</span>
+                    <span>남들이 보기에 단순한 한 줄을 만들기 위해 고민을 할때 즐거움을 느끼고, 앞으로 나아가고 싶은 욕심이 생깁니다.</span>
+                    <span>발전하고 싶은 욕심, 다른 관점으로 생각하는 창의성, 끝없는 도전의식 끊임없이 나아가며 발전하는 퍼블리셔가 되고 싶습니다.</span>
+                  </div>
+                  <div class="flex-list">
+                    <img src="./img/lyj.jpg" alt="" />
+                    <strong>Lee Yong Ju</strong>
+                    <em>1994.12.18</em>
+                  </div>
+                  <div class="flex-list">
+                    <div class="detail-area">
+                      <strong>학력사항</strong>
+                      <p>연세IT미래교육원 수료</p>
+                      <p>충북대학교 졸업</p>
+                      <p>수원고등학교 졸업</p>
+                    </div>
+                    <div class="detail-area">
+                      <strong>경력사항</strong>
+                      <p>매스토돈테</p>
+                    </div>
+                    <div class="detail-area">
+                      <strong>자격증</strong>
+                      <p>GTQ 포토샵 1급</p>
+                      <p>워드프로세서 1급</p>
+                      <p>웹디자인 기능사</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide03">
+              <div class="slide-inner">
+                <h2 class="cate-txt">Skills</h2>
+                <div class="card-list">
+                  <div class="card">
+                    <div class="face face1">
+                      <div class="content">
+                        <img src="./img/skills_icon_1t.png" />
+                        <h3>Design</h3>
+                      </div>
+                    </div>
+                    <div class="face face2">
+                      <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="face face1">
+                      <div class="content">
+                        <img src="./img/skills_icon_2t.png" />
+                        <h3>Code</h3>
+                      </div>
+                    </div>
+                    <div class="face face2">
+                      <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="face face1">
+                      <div class="content">
+                        <img src="./img/skills_icon_3t.png" />
+                        <h3>Launch</h3>
+                      </div>
+                    </div>
+                    <div class="face face2">
+                      <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="face face1">
+                      <div class="content">
+                        <img src="./img/skills_icon_1t.png" />
+                        <h3>Design</h3>
+                      </div>
+                    </div>
+                    <div class="face face2">
+                      <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide04"></div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
+      </div>
     </div>
-    <div id="por">
-        <p>PORTFOLIO</p>
-        <div>
-            <div id="his1">
-                <p>2021.1</p>
-                <div class="his1_1">
-                    <a href="">HTML</a>
-                    <a href="">CSS</a>
-                    <a href="">Javascript</a>
-                    <a href="">Jquery</a>
-                    <a href="">portfolio</a>
-                    <div class="effect"></div>
-                </div>
-                <div class="his1_2">
-                    <a href="">HTML</a>
-                    <a href="">CSS</a>
-                    <a href="">Javascript</a>
-                    <a href="">jquery</a>
-                    <a href="">portfolio</a>
-                    <div class="effect1"></div>
-                    <div class="effect2"></div>
-                </div>
-                <div class="his1_3">
-                    <a href="https://sining94.github.io/month1.github.io/" target="_blank"></a>
-                    <div id="his1_3_wrap">
-                        <p>습작평가</p>
-                    </div>
-                </div>
-            </div>
-            <div id="his2">
-                <p>2021.2</p>
-                <div id="his2_1">
-                    <a href="https://sining94.github.io/month2.github.io/" target="_blank"><img
-                            src="./ima/month2_personal.png" alt="month2_personal"></a>
-                    <div class="his2_wrap">
-                        <p>개인자작</p>
-                    </div>
-                </div>
-                <div id="his2_2">
-                    <a href="https://sining94.github.io/month2_team.github.io/" target="_blank"><img
-                            src="./ima/month2_team.png" alt="month2_teamProject"></a>
-                    <div class="his2_wrap">
-                        <p>팀프로젝트</p>
-                    </div>
-                </div>
-                <div id="his2_3">
-                    <a href="https://sining94.github.io/month2_etude.github.io/" target="_blank"><img
-                            src="./ima/month2_etude.png" alt="month2_etude"></a>
-                    <div class="his2_wrap">
-                        <p>개인습작</p>
-                    </div>
-                </div>
-            </div>
-            <div id="his3">
-                <p>2021.3</p>
-                <div id="his3_1">
-                    <a href="https://sining94.github.io/slide.github.io/" target="_blank">
-                        <div id="his3_1_slide">
-                            <img src="./ima/visual1.jpg" alt="">
-                            <img src="./ima/visual2.jpg" alt="">
-                            <img src="./ima/visual3.jpg" alt="">
-                            <img src="./ima/visual4.jpg" alt="">
-                            <img src="./ima/visual1.jpg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div id="his3_2">
-                    <a href="https://sining94.github.io/lioom.github.io/" target="_blank">
-                        <img src="./ima/lioom.png" alt="month3_teamProject">
-                    </a>
-                    <div class="his3_wrap">
-                        <p>모바일 습작 팀프로젝트</p>
-                    </div>
-                </div>
-            </div>
-            <div id="his4">
-                <p>2021.4</p>
-                <div id="his4_1">
-                    <a href="https://sining94.github.io/month4_etude1.github.io/" target="_blank">
-                        <img src="./ima/month4_etude1.png" alt="CHALLENGE KOREA">
-                    </a>
-                    <div class="his4_wrap" id="his4_1_wrap">
-                        <h1>개인 습작</h1>
-                    </div>
-                </div>
-                <div id="his4_2">
-                    <a href="https://sining94.github.io/month4_etude2.github.io/" target="_blank">
-                        <img src="./ima/month4_etude2.png" alt="BRArchitects">
-                    </a>
-                    <div class="his4_wrap" id="his4_2_wrap">
-                        <h1>반응형 습작</h1>
-                    </div>
-                </div>
-            </div>
-            <div id="his5">
-                <p>2021.4</p>
-                <div id="his5_1">
-                    <a href="https://sining94.github.io/month5_etude1.github.io/" target="_blank">
-                        <img src="./ima/month5_etude.png" alt="">
-                    </a>
-                    <div class="his5_wrap">
-                        <p>습작</p>
-                    </div>
-                </div>
-                <div id="his5_2">
-                    <a href="https://sining94.github.io/month5_etude2.github.io/" target="_blank">
-                        <img src="./ima/month5_etude2.png" alt="">
-                    </a>
-                    <div class="his5_wrap">
-                        <p>습작</p>
-                    </div>
-                </div>
-                <div id="his5_3">
-                    <a href="https://sining94.github.io/month5_etude3.github.io/" target="_blank">
-                        <img src="./ima/month5_etude3.png" alt="">
-                    </a>
-                    <div class="his5_wrap">
-                        <p>습작</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="add">
-        <div>
-            <span>L</span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-    </div>
-
-</body>
-
+  </body>
 </html>
